@@ -2623,7 +2623,7 @@ function render(years){
     switch (givenID) {
     case "c1": case "c17": case "c33": case "t1": case "bigrect1": case "checkbox1":
       if(type === "color"){
-        return "#1f77b4";
+        return "#f0ad4e";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2657,7 +2657,7 @@ function render(years){
       break;
     case "c2": case "c18": case "c34": case "t2": case "bigrect2": case "checkbox2":
       if(type === "color"){
-        return "#aec7e8";
+        return "#5bc0de";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2691,7 +2691,7 @@ function render(years){
       break;
     case "c3": case "c19": case "c35": case "t3": case "bigrect3": case "checkbox3":
       if(type === "color"){
-        return "#ff7f0e";
+        return "#5cb85c";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2725,7 +2725,7 @@ function render(years){
       break;
     case "c4": case "c20": case "c36": case "t4": case "bigrect4": case "checkbox4":
       if(type === "color"){
-        return "#ffbb78";
+        return "#d9534f";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2759,7 +2759,7 @@ function render(years){
       break;
     case "c5": case "c21": case "c37": case "t5": case "bigrect5": case "checkbox5":
       if(type === "color"){
-        return "#2ca02c";
+        return "#9acd32";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2793,7 +2793,7 @@ function render(years){
       break;
     case "c6": case "c22": case "c38": case "t6": case "bigrect6": case "checkbox6":
       if(type === "color"){
-        return "#98df8a";
+        return "#0099dc";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2827,7 +2827,7 @@ function render(years){
       break;
     case "c7": case "c23": case "c39": case "t7": case "bigrect7": case "checkbox7":
       if(type === "color"){
-        return "#9467bd";
+        return "#a53300";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2861,7 +2861,7 @@ function render(years){
       break;
     case "c8": case "c24": case "c40": case "t8": case "bigrect8": case "checkbox8":
       if(type === "color"){
-        return "#c5b0d5";
+        return "#1aafb8";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2895,7 +2895,7 @@ function render(years){
       break;
     case "c9": case "c25": case "c41": case "t9": case "bigrect9": case "checkbox9":
       if(type === "color"){
-        return "#8c564b";
+        return "#beef00";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2929,7 +2929,7 @@ function render(years){
       break;
     case "c10": case "c26": case "c42": case "t10": case "bigrect10": case "checkbox10":
       if(type === "color"){
-        return "#c49c94";
+        return "#a0522d";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2963,7 +2963,7 @@ function render(years){
       break;
     case "c11": case "c27": case "c43": case "t11": case "bigrect11": case "checkbox11":
       if(type === "color"){
-        return "#e377c2";
+        return "#d2691e";
       }
       else if(type === "data"){
         if(y > 2){
@@ -2997,7 +2997,7 @@ function render(years){
       break;
     case "c12": case "c28": case "c44": case "t12": case "bigrect12": case "checkbox12":
       if(type === "color"){
-        return "#9e4a6a";
+        return "#ffde2a";
       }
       else if(type === "data"){
         if(y > 2){
@@ -3031,7 +3031,7 @@ function render(years){
       break;
     case "c13": case "c29": case "c45": case "t13": case "bigrect13": case "checkbox13":
       if(type === "color"){
-        return "#ba6f14";
+        return "#16a085";
       }
       else if(type === "data"){
         if(y > 2){
@@ -3065,7 +3065,7 @@ function render(years){
       break;
     case "c14": case "c30": case "c46": case "t14": case "bigrect14": case "checkbox14":
       if(type === "color"){
-        return "#24e2cf";
+        return "#ff8c00";
       }
       else if(type === "data"){
         if(y > 2){
@@ -3099,7 +3099,7 @@ function render(years){
       break;
     case "c15": case "c31": case "c47": case "t15": case "bigrect15": case "checkbox15":
       if(type === "color"){
-        return "#02d6fc";
+        return "#4169e7";
       }
       else if(type === "data"){
         if(y > 2){
@@ -3133,7 +3133,7 @@ function render(years){
       break;
     case "c16": case "c32": case "c48": case "t16": case "bigrect16": case "checkbox16":
       if(type === "color"){
-        return "#bcf5ff";
+        return "#228b22";
       }
       else if(type === "data"){
         if(y > 2){
@@ -3405,6 +3405,7 @@ function render(years){
           .style("font-size", "1.0em")
           .style("font-weight", "bold");
     }
+
     //This is for the title above the graph
     svg.append("text")
         .attr("x", (503-textXPosChange))
@@ -3522,7 +3523,7 @@ function render(years){
       }
       else{
         svg.append("rect")
-            .attr("fill", "url(#hash4_4)")
+            .attr("fill", "#d3d3d3")
             .attr("x", (650 - textXPosChange))
             .attr("y", 55+i*30)
             .attr("rx", 5)
