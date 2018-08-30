@@ -3707,7 +3707,7 @@ function printPrecipYearType() {
       (boardData[currentBoard].precipitation[currentYear - 1] == 24.58 ||
         boardData[currentBoard].precipitation[currentYear - 1] == 28.18)
     ) {
-      return "Flood";
+      return "Wet";
     }
     return "Wet";
   }
