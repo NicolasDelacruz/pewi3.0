@@ -35,9 +35,11 @@
   //as needed
   //the parent page is then called to hide the options iframe
   function saveCurrentOptionsState() {
-    
+
     //find the elements that are able to be checked
     var toggledElements = document.getElementsByClassName('toggle');
+
+    console.log(toggledElements);
     var tempString = "";
 
     //if there are toggle elements
@@ -131,6 +133,8 @@
         idName = "year" + yearNum + "PrecipContainer";
         tempString += idName + "\n";
       }
+
+      console.log(tempString);
 
       //put all the elements in the parameters div of index.html
       window.top.document.getElementById('parameters').innerHTML = tempString;
@@ -539,6 +543,7 @@
         var maxValue = parseFloat(parent.document.getElementById(progressbarIds[i]).childNodes[3].childNodes[5].style.left);
         var actualMinValue = parent.getRawValue(minValue, i);
         var actualMaxValue = parent.getRawValue(maxValue, i);
+
         // Carbon correction
         if(i == 2) {
           actualMinValue = Math.round(actualMinValue / 0.90718474 * 100) / 100;
@@ -701,35 +706,42 @@
   // Set placeholder value, when user enter a numerical value in the input box, we set placehoder to be the input value and then set the input value to be "".
   // So that in the min-max value setting table, we're able to see real-time update effect.
   function setPlaceholderValue(id,value) {
+    console.log("inside");
     var siblingId;
     var siblingValue;
+    var prevValue = 66;
     var isValid = false;
     if(id.indexOf("min") != -1){
       siblingId = "max" + id.charAt(id.length - 1);
       siblingValue = parseFloat(document.getElementById(siblingId).placeholder);
       if((!isNaN(siblingValue) && siblingValue >= value) || isNaN(siblingValue))
         isValid = true;
+        console.log("inside 1");
     }
     if(id.indexOf("max") != -1){
       siblingId = "min" + id.charAt(id.length - 1);
       siblingValue = parseFloat(document.getElementById(siblingId).placeholder);
       if((!isNaN(siblingValue) && siblingValue <= value) || isNaN(siblingValue))
         isValid = true;
+        console.log("inside 2");
     }
     if(id.indexOf("actualMin") != -1){
       siblingId = "actualMax" + id.charAt(id.length - 1);
       siblingValue = parseFloat(document.getElementById(siblingId).placeholder);
       if((!isNaN(siblingValue) && siblingValue >= value) || isNaN(siblingValue))
         isValid = true;
+        console.log("inside 3");
     }
     if(id.indexOf("actualMax") != -1){
       siblingId = "actualMin" + id.charAt(id.length - 1);
       siblingValue = parseFloat(document.getElementById(siblingId).placeholder);
       if((!isNaN(siblingValue) && siblingValue <= value) || isNaN(siblingValue))
         isValid = true;
+        console.log("inside 4");
     }
     if(isNaN(value) || value == "" ){
       isValid = false;
+      console.log("inside 5");
     }
 
     if(isValid){
